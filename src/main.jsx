@@ -404,7 +404,7 @@ function App() {
                   </span>
                   <div>
                     <h3>NDTV</h3>
-                    <p>Newsroom experience</p>
+                    <p>Editorial Intern</p>
                   </div>
                   <span className="credit-arrow">↗</span>
                 </div>
@@ -414,14 +414,12 @@ function App() {
                   </span>
                   <div>
                     <h3>Republic World</h3>
-                    <p>News and editorial environment</p>
+                    <p>Trainee Editor</p>
                   </div>
                   <span className="credit-arrow">↗</span>
                 </div>
               </div>
-              <small className="verify-note">
-                Confirm exact roles and dates before publishing.
-              </small>
+            
             </div>
           </div>
         </section>
@@ -489,9 +487,6 @@ function App() {
               </div>
             </div>
           </div>
-          <p className="contact-small">
-            REPLACE THE PLACEHOLDER EMAIL AND SOCIAL LINKS BEFORE LAUNCH.
-          </p>
         </section>
       </main>
       <footer>

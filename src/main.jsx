@@ -24,7 +24,7 @@ const projects = [
     title: "Photography",
     category: "Photography",
     description: "Capturing real frames through the lens.",
-    image: "/image.png",
+    image: "/image.webp",
     number: "01",
     tag: "STILLS / LIGHT",
     link: "https://drive.google.com/drive/folders/1Ta8wA97TBMt9Pbm_ppppDSvxuLrgN-zw?usp=drive_link",
@@ -33,7 +33,7 @@ const projects = [
     title: "Edited Videos",
     category: "Video Editing",
     description: "Art is in what you leave out.",
-    image: "/video.jpeg",
+    image: "/video.webp",
     number: "02",
     tag: "CUT / RHYTHM",
     link: "https://drive.google.com/drive/folders/1u1NqIT3hmE2OK0_Q0ex3PelYsjyQfL6f?usp=drive_link",
@@ -42,7 +42,7 @@ const projects = [
     title: "Production",
     category: "Filmmaking",
     description: "Scripted by life. Created by me.",
-    image: "/prod.jpeg",
+    image: "/prod.webp",
     number: "03",
     tag: "SCENE / ACTION",
     link: "https://www.youtube.com/@NARRATIVECINEMA-y8p",
@@ -51,7 +51,7 @@ const projects = [
     title: "Designing",
     category: "Design",
     description: "Giving shape to ideas.",
-    image: "/degine.jpeg",
+    image: "/degine.webp",
     number: "04",
     tag: "FORM / FEELING",
     link: "https://drive.google.com/drive/folders/1SKtXxlG-9imXPkFOXhDlJCI1uw35rEFO?usp=drive_link",
@@ -305,8 +305,11 @@ function App() {
                   <img
                     src={p.image}
                     alt={`${p.title} portfolio visual`}
-                    loading="lazy"
+                    loading={i === 0 ? "eager" : "lazy"}
+                    fetchPriority={i === 0 ? "high" : "auto"}
+                    decoding="async"
                   />
+
                   <span className="image-shade" />
                   <span className="project-no">
                     {p.number} / {p.tag}
@@ -317,6 +320,7 @@ function App() {
                   <span className="film-frame-corner c1" />
                   <span className="film-frame-corner c2" />
                 </button>
+
                 <div className="project-caption">
                   <div>
                     <h3>{p.title}</h3>
@@ -518,7 +522,7 @@ function App() {
               <p>{selected.description}</p>
               <a href={selected.link} target="_blank" rel="noopener noreferrer">
                 Open original <ArrowUpRight size={15} />
-              </a>  
+              </a>
             </div>
           </div>
         </div>
